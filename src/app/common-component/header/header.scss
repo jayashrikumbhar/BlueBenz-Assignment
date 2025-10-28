@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    color: #fff;
+    
+  
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  
+    .cart-btn {
+      position: relative;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      margin-left: 20px;
+  
+      .material-icons {
+        font-size: 28px;
+      }
+  
+      .badge {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background: crimson;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 50%;
+      }
+    }
+
+    .logout-btn{
+      margin-left: 20px;
+      background-color: rgb(243, 126, 126);
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      border: none;
+    }
+
+    .logout-btn:hover{
+      background-color: rgb(178, 68, 68);
+    }
+  }

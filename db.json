@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Product 1",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/1/400/300",
+      "price": 299
+    },
+    {
+      "id": "2",
+      "title": "Product 2",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/2/400/300",
+      "price": 499
+    },
+    {
+      "id": "3",
+      "title": "Product 3",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/3/400/300",
+      "price": 199
+    },
+    {
+      "id": "4",
+      "title": "Product 4",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/4/400/300",
+      "price": 299
+    },
+    {
+      "id": "5",
+      "title": "Product 5",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/5/400/300",
+      "price": 499
+    },
+    {
+      "id": "6",
+      "title": "Product 6",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/6/400/300",
+      "price": 199
+    },
+    {
+      "id": "7",
+      "title": "Product 7",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/7/400/300",
+      "price": 299
+    },
+    {
+      "id": "8",
+      "title": "Product 8",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/8/400/300",
+      "price": 499
+    },
+    {
+      "id": "9",
+      "title": "Product 9",
+      "description": "High-quality item with great value",
+      "image": "https://picsum.photos/seed/9/400/300",
+      "price": 199
+    }
+  ],
+  "cartItems": [],
+  "users": [
+    {
+      "id": "u1",
+      "username": "Jayashri",
+      "email": "jayashri@gmail.com",
+      "password": "Test@123"
+    },
+    {
+      "id": "f55e",
+      "username": "jayuk",
+      "email": "jayuk@gmail.com",
+      "password": "Test@123"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<form class="auth-form" [formGroup]="signUpForm">
+  <h2>Sign Up</h2>
+  <label>
+    Username
+    <input name="username" formControlName="username" required />
+    @if(f['username']['touched'] && f['username']['errors']){
+      @if (f['username']['errors']['required']) {
+        <span class="error">Username is required</span>
+      }
+    }
+  </label>
+  <label>
+    Email
+    <input type="email" name="email" formControlName="email" required />
+    @if(f['email']['touched'] && f['email']['errors']){
+      @if (f['email']['errors']['required']) {
+        <span class="error">Email is required</span>
+      }
+      @else if (f['email']['errors']['email']) {
+        <span class="error">Enter Valid Email</span>
+      }
+    }
+  </label>
+  <label>
+    Password
+    <input type="password" name="password" formControlName="password" required />
+    @if(f['password']['touched'] && f['password']['errors']){
+      @if (f['password']['errors']['required']) {
+        <span class="error">Password is required</span>
+      }
+      @else if (f['password']['errors']['minlength']) {
+        <span class="error">Password should contains minimum 8 characters</span>
+      }
+      @else if (f['password']['errors']['maxlength']) {
+        <span class="error">Password should contains maximum 16 characters</span>
+      }
+    }
+  </label>
+  <button type="submit" (click)="submit()" [disabled]="signUpForm.invalid">Create account</button>
+
+  <hr>
+
+  <p>Already have an account? <span class="loginText" routerLink="/">Login here</span></p>
+</form>
+

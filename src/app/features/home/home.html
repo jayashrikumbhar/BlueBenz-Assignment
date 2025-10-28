@@ -1,0 +1,21 @@
+<div class="home-container">
+    <section class="product-list">
+        @for (product of products(); track product.id) {
+          <app-product-card
+            [product]="product"
+            (addToCart)="onAddToCart($event)">
+          </app-product-card>
+        }
+    
+        @if (isLoading()) {
+          <div class="loading">Loading...</div>
+        }
+    </section>
+    
+    <div class="pagination">
+        <button (click)="prevPage()" [disabled]="currentPage() === 1">Previous</button>
+        <span>Page {{ currentPage() }}</span>
+        <button (click)="nextPage()" [disabled]="!hasMore()">Next</button>
+    </div>
+</div>
+

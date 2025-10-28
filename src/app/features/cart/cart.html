@@ -1,0 +1,33 @@
+<section class="cart-container">
+    <header class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="back-btn" [routerLink]="'/'">← Back to Products</button>
+    </header>
+  
+    @if (cartItems().length === 0) {
+      <p class="empty">Your cart is empty.</p>
+    } @else {
+      <div class="cart-items">
+        @for (item of cartItems(); track item.id) {
+          <div class="cart-item">
+            <img [src]="item.image" class="thumb" />
+            <div class="info">
+              <h4>{{ item.title }}</h4>
+              <p>₹{{ item.price }}</p>
+              <div class="qty-controls">
+                <button (click)="decrement(item)">-</button>
+                <span>{{ item.quantity }}</span>
+                <button (click)="increment(item)">+</button>
+              </div>
+            </div>
+            <button class="remove-btn" (click)="remove(item.id)">Remove</button>
+          </div>
+        }
+      </div>
+  
+      <footer class="cart-footer">
+        <h3>Total: ₹{{ totalAmount() }}</h3>
+        <button class="checkout-btn">Checkout</button>
+      </footer>
+    }
+  </section>

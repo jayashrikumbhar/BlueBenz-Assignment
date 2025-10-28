@@ -1,0 +1,35 @@
+.auth-form {
+  max-width: 360px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  input {
+    width: 95%;
+    padding: .5rem;
+  }
+
+  button {
+    padding: .6rem 1rem;
+  }
+
+  .error{
+    font-size: 12px;
+    color: red;
+  }
+
+  
+  hr{
+    color: rgb(16, 12, 12);
+    width: 100%;
+  }
+
+  .loginText{
+    color: blue;
+    cursor: pointer;
+  }
+}
+ 
+
+

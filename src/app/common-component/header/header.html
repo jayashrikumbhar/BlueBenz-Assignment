@@ -1,0 +1,14 @@
+<header class="header">
+    <h1 class="logo">BlueBenz Store</h1>
+    @if (loggedInUser == 'true') {
+        <div style="display: flex;">
+            <button class="cart-btn" [routerLink]="'/cart'">
+                <span class="material-icons">Cart</span>
+                <span class="badge">{{ cartCount() }}</span>
+            </button>
+    
+            <button class="logout-btn" (click)="logOut()">LogOut</button>
+        </div>
+    }
+    
+</header>
