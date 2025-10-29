@@ -13,7 +13,8 @@
             <img [src]="item.image" class="thumb" />
             <div class="info">
               <h4>{{ item.title }}</h4>
-              <p>₹{{ item.price }}</p>
+              <p class="description">{{ item.description }}</p> 
+              <p>₹{{ item.price }}</p> 
               <div class="qty-controls">
                 <button (click)="decrement(item)">-</button>
                 <span>{{ item.quantity }}</span>

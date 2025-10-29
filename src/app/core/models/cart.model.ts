@@ -4,4 +4,5 @@ export interface CartItemEntity {
     image: string;
     price: number;
     quantity: number;
+    description: string;
   }
