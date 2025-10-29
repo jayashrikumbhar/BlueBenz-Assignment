@@ -26,7 +26,7 @@ export class AuthService {
     const finder = isEmail
       ? this.users.findByEmail(usernameOrEmail)
       : this.users.findByUsername(usernameOrEmail);
-    finder.pipe(take(1)).subscribe(list => {
+    finder.subscribe(list => {
       const user = list.find(u => u.password === password) || null;
       this.currentUser.set(user);
       this.isAuthenticated.set(!!user);
@@ -36,7 +36,7 @@ export class AuthService {
   }
 
   public signup(payload: signupPayload): void {
-    this.users.create(payload).pipe(take(1)).subscribe(user => {
+    this.users.create(payload).subscribe(user => {
       this.currentUser.set(user);
       this.isAuthenticated.set(true);
       localStorage.setItem("isLoggenInUser", 'true');

@@ -1,14 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environment/environment';
-
-export interface ProductEntity {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  price: number;
-}
+import { ProductEntity } from '../models/product.model';
 
 @Injectable({ providedIn: 'root' })
 export class ProductRepository {
