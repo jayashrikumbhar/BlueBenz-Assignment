@@ -2,6 +2,7 @@ import { Component, computed, effect, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CartService } from '../../core/services/cart.service';
 import { AuthService } from '../../core/services/auth.service';
+import { ToastService } from '../../core/services/toast.service';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,7 @@ import { AuthService } from '../../core/services/auth.service';
 export class Header {
   private readonly cartService = inject(CartService);
   private readonly authService = inject(AuthService);
+  private readonly toastService = inject(ToastService);
 
   public cartCount = computed(() => this.cartService.items().length);
   public isAuthenticated = this.authService.isAuthenticated;
@@ -24,5 +26,6 @@ export class Header {
 
   public logOut(){
     this.authService.logout();
+    this.toastService.clear();
   }
 }

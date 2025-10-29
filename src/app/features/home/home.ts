@@ -4,6 +4,7 @@ import { CartService } from '../../core/services/cart.service';
 import { ProductCardComponent } from '../../common-component/product-card/product-card';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../core/models/product.model';
+import { ToastService } from '../../core/services/toast.service';
 
 @Component({
   selector: 'app-home',
@@ -15,14 +16,16 @@ import { Product } from '../../core/models/product.model';
 export class Home {
   private readonly productService = inject(ProductService);
   private readonly cartService = inject(CartService);
+  private readonly toastService = inject(ToastService);
 
   products = this.productService.products;
   isLoading = this.productService.isLoading;
   currentPage = this.productService.currentPage;
   hasMore = this.productService.hasMore;
 
-  async onAddToCart(product: Product) {
+  async onAddToCart(product: Product) {    
     await this.cartService.addItemToCart(product);
+    this.toastService.success("Item added to cart");
   }
 
   nextPage() {

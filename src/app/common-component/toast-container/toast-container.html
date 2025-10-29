@@ -1,0 +1,9 @@
+<div class="toast-wrapper">
+  @for (t of toasts(); track t.id) {
+    <div class="toast" [ngClass]="t.type">
+      <span class="msg">{{ t.message }}</span>
+      <button class="close" (click)="dismiss(t.id)">×</button>
+    </div>
+  }
+</div>
+
