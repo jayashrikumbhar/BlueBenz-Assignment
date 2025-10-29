@@ -8,10 +8,21 @@
   input {
     width: 95%;
     padding: .5rem;
+    border: 1px solid rgb(78, 77, 77);
+    border-radius: 10px;
   }
 
   button {
     padding: .6rem 1rem;
+    background-color: #0078d4;
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 245, 245);
+    cursor: pointer;
+
+    &:disabled{
+      background-color: #5195c9;
+    }
   }
 
   .error{

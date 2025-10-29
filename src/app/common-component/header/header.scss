@@ -21,7 +21,7 @@
       margin-left: 20px;
   
       .material-icons {
-        font-size: 28px;
+        font-size: 25px;
       }
   
       .badge {
@@ -38,15 +38,17 @@
 
     .logout-btn{
       margin-left: 20px;
-      background-color: rgb(243, 126, 126);
+      background-color: rgb(244, 67, 67);
       color: #fff;
       padding: 10px;
       cursor: pointer;
       font-size: 20px;
       border: none;
+      border-radius: 10px;
+
+      &:hover{
+        background-color: rgb(178, 68, 68);
+      }
     }
 
-    .logout-btn:hover{
-      background-color: rgb(178, 68, 68);
-    }
   }
